@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  mongodb-test:
+    extends:
+      file: ../docker-compose-common.yml
+      service: mongodb
+    ports:
+      - 27018:27017
