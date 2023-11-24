@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  mongodb-local:
+    restart: always
+    image: mongo:6.0.5
+    tmpfs:
+      - /data/db
+    ports:
+      - 27017:27017
+    profiles:
+      - local
+  mongodb-test:
+    restart: always
+    image: mongo:6.0.5
+    tmpfs:
+      - /data/db
+    ports:
+      - 27018:27017
+    profiles:
+      - test
